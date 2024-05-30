@@ -1,0 +1,18 @@
+CREATE DATABASE progweb;
+
+USE progweb;
+
+CREATE TABLE usuario (
+    usuario VARCHAR(50) DEFAULT NULL,
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    correo VARCHAR(50) DEFAULT NULL,
+    edad INT(11) DEFAULT NULL,
+    ocupacion VARCHAR(20) DEFAULT NULL,
+    contacto INT(11) DEFAULT NULL,
+    Alta TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    password VARCHAR(20) DEFAULT NULL,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO usuario (usuario, id, correo, edad, ocupacion, contacto, Alta, password)
+VALUES (

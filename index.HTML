@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Declara el tipo de documento como HTML5 -->
+<head>
+    <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura la ventana gráfica para que se ajuste a la anchura del dispositivo y establece un nivel de zoom inicial de 1.0 -->
+    <title>Formulario</title>
+    <!-- Título de la página que aparecerá en la pestaña del navegador -->
+    <link rel="stylesheet" href="./style/style.css">
+    <!-- Enlaza la hoja de estilos CSS externa -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Preconecta con Google Fonts para optimizar la carga de las fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Permite el uso de fuentes de Google Fonts con CORS (Cross-Origin Resource Sharing) -->
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <!-- Importa la fuente 'Staatliches' desde Google Fonts -->
+</head>
+<body>
+    <!-- Cuerpo del documento -->
+    <div class="formulario">
+        <!-- Contenedor principal del formulario -->
+        <h1>Sistema de Login</h1>
+        <!-- Título principal del formulario -->
+        <h2 id="greeting">Bienvenido</h2>
+        <!-- Subtítulo dinámico que cambiará según la hora del día -->
+        <form id="loginForm" method="post" action="login.php">
+            <!-- Inicio del formulario con el método POST que envía los datos a 'login.php' -->
+            <label for="usuario">Usuario</label><br />
+            <!-- Etiqueta para el campo de texto del usuario -->
+            <input type="text" id="usuario" name="usuario" /><br />
+            <!-- Campo de texto para ingresar el nombre de usuario -->
+            <label for="password">Contraseña</label><br />
+            <!-- Etiqueta para el campo de contraseña -->
+            <input type="password" id="password" name="password" /><br />
+            <!-- Campo de texto para ingresar la contraseña -->
+            <button type="button" id="togglePassword">Mostrar Contraseña</button><br /> <br />
+            <!-- Botón para mostrar u ocultar la contraseña -->
+            <input type="submit" value="Ingresar"/>
+            <!-- Botón de envío del formulario -->
+            <button type="button" onclick="location.href='view/v_register.php'">Registrar</button>
+            <!-- Botón para redirigir a la página de registro -->
+            <button type="button" onclick="location.href='view/select.php'">Mostrar</button>
+            <!-- Botón para redirigir a la página de mostrar registros -->
+        </form>
+    </div>
+    <script src="js/formValidation.js"></script>
+    <!-- Enlaza el archivo JavaScript para la validación del formulario -->
+    <script src="js/togglePassword.js"></script>
+    <!-- Enlaza el archivo JavaScript para la funcionalidad de mostrar/ocultar contraseña -->
+    <script src="js/greeting.js"></script>
+    <!-- Enlaza el archivo JavaScript para mostrar el saludo dinámico -->
+</body>
+</html>
+
